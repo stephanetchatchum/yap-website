@@ -1,5 +1,11 @@
+"use client";
+
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
+
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <main>
       {/* Hero Section */}
@@ -20,23 +26,23 @@ export default function Home() {
         {/* Content, sits above the image and overlay */}
         <div className="relative max-w-3xl mx-auto">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-            More Than Just Tutoring.
+            {t.home.heroHeadline}
           </h1>
           <p className="text-lg text-gray-200 mb-8">
-            A premium development ecosystem tailored perfectly to your child&apos;s unique potential.
+            {t.home.heroSubheadline}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/admissions"
               className="bg-gold text-navy font-semibold rounded-lg px-6 py-3 hover:opacity-90"
             >
-              Book a Diagnostic Session
+              {t.home.bookDiagnostic}
             </a>
             <a
               href="/academics"
               className="border border-white text-white rounded-lg px-6 py-3 hover:bg-white hover:text-navy transition"
             >
-              Explore Our Programs
+              {t.home.explorePrograms}
             </a>
           </div>
         </div>
@@ -50,10 +56,10 @@ export default function Home() {
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-gold">
               <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.49 4.49 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.49 4.49 0 01-1.307 3.497 4.49 4.49 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
             </svg>
-            RDB Registered
+            {t.home.trustRdb}
           </span>
           <span>TIN: 156850598</span>
-          <span>100% Vetted Mentors</span>
+          <span>{t.home.trustVetted}</span>
         </div>
       </section>
 
@@ -64,16 +70,13 @@ export default function Home() {
           {/* Text takes 3 of 5 columns */}
           <div className="md:col-span-3">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-navy">
-              The Meaning of Yigil
+              {t.home.philosophyTitle}
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              In the Bassa language, &quot;Yigil&quot; means Learning. At Yigil Academy
-              of Potentials, we believe that true learning extends far beyond
-              memorization. It is about intellectual curiosity, holistic skill
-              development, and character building.
+              {t.home.philosophyBody1}
             </p>
             <p className="text-gray-700 leading-relaxed mt-4 font-semibold text-navy">
-              We don&apos;t just tutor students; we mentor future Leaders.
+              {t.home.philosophyBody2}
             </p>
           </div>
 

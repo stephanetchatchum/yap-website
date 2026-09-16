@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const balooTwo = Baloo_2({
   variable: "--font-heading",
@@ -27,7 +28,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${balooTwo.variable} ${nunitoSans.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col"><Navbar />{children}<Footer /><WhatsAppButton /></body>
+      <body className="min-h-full flex flex-col">
+        <LanguageProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          <WhatsAppButton />
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

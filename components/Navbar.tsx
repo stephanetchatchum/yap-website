@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Navbar() {
 
     const [menuOpen, setMenuOpen] = useState(false);
+    const { language, toggleLanguage, t } = useLanguage();
 
     return (
         <header className="sticky top-0 z-50 bg-navy text-white">
@@ -17,23 +19,26 @@ export default function Navbar() {
 
                 {/* Nav links, desktop only */}
                 <nav className="hidden md:flex items-center gap-6 text-sm">
-                <a href="/" className="hover:text-gold">Home</a>
-                <a href="/academics" className="hover:text-gold">Academic Programs</a>
-                <a href="/incubator" className="hover:text-gold">Talent Incubator</a>
-                <a href="/pricing" className="hover:text-gold">Pricing & Memberships</a>
-                <a href="/about" className="hover:text-gold">About Us</a>
+                    <a href="/" className="hover:text-gold">{t.nav.home}</a>
+                    <a href="/academics" className="hover:text-gold">{t.nav.academics}</a>
+                    <a href="/incubator" className="hover:text-gold">{t.nav.incubator}</a>
+                    <a href="/pricing" className="hover:text-gold">{t.nav.pricing}</a>
+                    <a href="/about" className="hover:text-gold">{t.nav.about}</a>
                 </nav>
 
                 {/* Right side: language toggle + CTA, desktop only */}
                 <div className="hidden md:flex items-center gap-4">
-                <button className="text-sm border border-white rounded px-2 py-1">
-                    EN / FR
+                <button
+                    onClick={toggleLanguage}
+                    className="text-sm border border-white rounded px-2 py-1"
+                >
+                    {language === "en" ? "FR" : "EN"}
                 </button>
                 <a
                     href="/admissions"
                     className="bg-gold text-navy font-semibold rounded-lg px-4 py-2 text-sm hover:opacity-90"
                 >
-                    Book Assessment
+                    {t.nav.bookAssessment}
                 </a>
                 </div>
 
@@ -58,8 +63,11 @@ export default function Navbar() {
                 <a href="/incubator" className="hover:text-gold" onClick={() => setMenuOpen(false)}>Talent Incubator</a>
                 <a href="/pricing" className="hover:text-gold" onClick={() => setMenuOpen(false)}>Pricing & Memberships</a>
                 <a href="/about" className="hover:text-gold" onClick={() => setMenuOpen(false)}>About Us</a>
-                <button className="text-sm border border-white rounded px-2 py-1 w-fit">
-                    EN / FR
+                <button
+                    onClick={toggleLanguage}
+                    className="text-sm border border-white rounded px-2 py-1 w-fit"
+                >
+                    {language === "en" ? "FR" : "EN"}
                 </button>
                 <a
                     href="/admissions"

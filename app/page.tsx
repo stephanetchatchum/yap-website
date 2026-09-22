@@ -6,24 +6,27 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function Home() {
   const { t } = useLanguage();
 
+  const welcomeKit = [
+    "Official Membership Card",
+    "Custom Yigil Polo Shirt",
+    "Branded Pen",
+    "Academic Goal-Tracker Book",
+    "Premium Branded Water Bottle",
+  ];
+
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative text-white py-32 px-4 text-center overflow-hidden">
-        
-        {/* Background image */}
+      <section className="relative text-white py-32 px-4 text-center overflow-hidden md:min-h-[85vh] md:flex md:items-center">
         <Image
-          src="/images/hero-students.jpg"
-          alt="Students studying together"
+          src="/images/hero-students-2.jpg"
+          alt="Students collaborating on a tablet in the library"
           fill
           className="absolute inset-0 w-full h-full object-cover"
           priority
         />
-
-        {/* Dark overlay for readability */}
         <div className="absolute inset-0 bg-navy/50"></div>
 
-        {/* Content, sits above the image and overlay */}
         <div className="relative max-w-3xl mx-auto">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
             {t.home.heroHeadline}
@@ -46,7 +49,6 @@ export default function Home() {
             </a>
           </div>
         </div>
-
       </section>
 
       {/* Trust Bar */}
@@ -63,87 +65,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="bg-white pt-24 pb-56 px-4">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12 items-start">
-          
-          {/* Text takes 3 of 5 columns */}
-          <div className="md:col-span-3">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-navy">
-              {t.home.philosophyTitle}
-            </h2>
-            <p className="text-gray-700 leading-relaxed">
-              {t.home.philosophyBody1}
-            </p>
-            <p className="text-gray-700 leading-relaxed mt-4 font-semibold text-navy">
-              {t.home.philosophyBody2}
-            </p>
-          </div>
+      {/* Our Pillars */}
+      <section className="bg-gray-50 py-20 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy text-center mb-12">
+            {t.home.pillarsTitle}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-          {/* Quote card, slightly rotated, oversized quotation mark behind it */}
-          <div className="md:col-span-2 relative pt-6">
-            <span className="font-heading absolute -top-8 -left-12 text-[160px] text-gold/25 select-none leading-none z-0">
-              &ldquo;
-            </span>
-
-            <div className="relative z-10 bg-navy text-white rounded-xl p-8 shadow-lg -rotate-2">
-              <p className="font-heading text-xl leading-snug">
-                Education is the most powerful weapon which you can use to
-                change the world.
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <h3 className="font-heading text-2xl font-bold mb-2 text-navy">
+                Academic Excellence
+              </h3>
+              <p className="text-gray-700 mb-6">
+                Deep-focus mentoring tailored to global standards: Cambridge
+                International, IB, Rwandan National Curriculum, and France
+                Education International. From Primary Foundation to Secondary Mastery.
               </p>
-              <p className="mt-4 text-sm text-gold uppercase tracking-wide">
-                Nelson Mandela
-              </p>
+              <a
+                href="/academics"
+                className="inline-block bg-navy text-white font-semibold rounded-lg px-5 py-2 hover:opacity-90"
+              >
+                Explore Academic Programs
+              </a>
             </div>
 
-            <span className="font-heading absolute -bottom-30 -right-12 text-[160px] text-gold/25 select-none leading-none z-0">
-              &rdquo;
-            </span>
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <h3 className="font-heading text-2xl font-bold mb-2 text-navy">
+                YAP Talent Incubator
+              </h3>
+              <p className="text-gray-700 mb-6">
+                Because true potential is not only measured by academic grades.
+                Music, visual arts, public speaking, martial arts, chess, and more,
+                all under one roof.
+              </p>
+              <a
+                href="/incubator"
+                className="inline-block bg-gold text-navy font-semibold rounded-lg px-5 py-2 hover:opacity-90"
+              >
+                Explore Talent Incubator
+              </a>
+            </div>
+
           </div>
-
-        </div>
-      </section>
-
-      {/* Core Pillars */}
-      <section className="bg-gray-50 py-20 px-4">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-
-          {/* Academic Excellence Card */}
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <h3 className="font-heading text-4xl md:text-5xl font-bold mb-2">
-              Academic Excellence
-            </h3>
-            <p className="text-gray-700 mb-6">
-              Deep-focus mentoring tailored to global standards: Cambridge
-              International, IB, Rwandan National Curriculum, and Francophone
-              systems. From Primary Foundation to Secondary Mastery.
-            </p>
-            <a
-              href="/academics"
-              className="inline-block bg-navy text-white font-semibold rounded-lg px-5 py-2 hover:opacity-90"
-            >
-              Explore Academic Programs
-            </a>
-          </div>
-
-          {/* Talent Incubator Card */}
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <h3 className="font-heading text-4xl md:text-5xl font-bold mb-2">
-              YAP Talent Incubator
-            </h3>
-            <p className="text-gray-700 mb-6">
-              Because true potential isn&apos;t measured by grades alone. Music,
-              visual arts, public speaking, martial arts, chess, and more, all
-              under one roof.
-            </p>
-            <a
-              href="/incubator"
-              className="inline-block bg-gold text-navy font-semibold rounded-lg px-5 py-2 hover:opacity-90"
-            >
-              Explore Talent Incubator
-            </a>
-          </div>
-
         </div>
       </section>
 
@@ -176,7 +140,7 @@ export default function Home() {
               </div>
               <h3 className="font-heading font-bold text-navy mb-2">Ultimate Flexibility</h3>
               <p className="text-gray-600 text-sm">
-                Highly flexible scheduling and adaptable timetables that fit around your family&apos;s life, not the other way around.
+                Highly flexible scheduling and adaptable timetables that fit around your family&apos;s life.
               </p>
             </div>
 
@@ -204,6 +168,54 @@ export default function Home() {
               </p>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* YAP Membership — NEW section, before Promo CTA */}
+      <section className="bg-navy text-white py-20 px-4">
+        <div className="max-w-5xl mx-auto text-center">
+          <span className="text-gold text-sm font-semibold uppercase tracking-wide">
+            Loyalty is Rewarded
+          </span>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4">
+            The Exclusive YAP Membership
+          </h2>
+          <p className="text-gray-200 max-w-2xl mx-auto mb-12">
+            After three (3) consecutive months of enrollment, students are
+            officially inaugurated as YAP Members, unlocking the full Welcome Kit
+            and exclusive community privileges.
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            {welcomeKit.map((item) => (
+              <div
+                key={item}
+                className="bg-white/10 rounded-lg p-5 flex flex-col items-center justify-center text-center"
+              >
+                <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5 text-gold">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375" />
+                  </svg>
+                </div>
+                <p className="text-xs font-medium">{item}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 text-left max-w-2xl mx-auto">
+            <div>
+              <h3 className="font-heading font-bold text-gold mb-1">Birthday Recognition</h3>
+              <p className="text-sm text-gray-300">
+                A dedicated, personalized birthday gift from the academy.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-heading font-bold text-gold mb-1">Community Privileges</h3>
+              <p className="text-sm text-gray-300">
+                Access to termly gatherings, internal competitions, restricted workshops, and exclusive discounts with Kigali partner institutions.
+              </p>
+            </div>
           </div>
         </div>
       </section>

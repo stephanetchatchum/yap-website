@@ -36,10 +36,10 @@ export default function Navbar() {
                 {/* Nav links, desktop only */}
                 <nav className="hidden md:flex items-center gap-6 text-sm">
                     <a href="/" className={linkClass("/")}>{t.nav.home}</a>
+                    <a href="/about" className={linkClass("/about")}>{t.nav.about}</a>
                     <a href="/academics" className={linkClass("/academics")}>{t.nav.academics}</a>
                     <a href="/incubator" className={linkClass("/incubator")}>{t.nav.incubator}</a>
                     <a href="/pricing" className={linkClass("/pricing")}>{t.nav.pricing}</a>
-                    <a href="/about" className={linkClass("/about")}>{t.nav.about}</a>
                 </nav>
 
                 {/* Right side: language toggle + CTA, desktop only */}

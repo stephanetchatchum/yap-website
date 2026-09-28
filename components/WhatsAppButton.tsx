@@ -1,7 +1,7 @@
 export default function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/250792400652"
+      href="https://wa.me/250792400652?text=Hello%20*Yigil%20Academy*%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20your%20premium%20tutoring%20services%20and%20book%20a%20*Free%20Diagnostic%20Assessment*%20for%20my%20child."
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 bg-green-500 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg hover:bg-green-600 hover:scale-110 transition-transform duration-200"

@@ -15,12 +15,12 @@ export default function Footer() {
                 {/* Column 2: Quick Links */}
                 <div>
                     <h3 className="text-sm uppercase tracking-wide font-bold text-gold mb-3">Quick Links</h3>
-                    <ul className="space-y-1 text-gray-300 text-xs leading-relaxed">
+                    <ul className="space-y-1 text-gray-300 text-xs">
                         <li><a href="/" className="hover:text-gold">Home</a></li>
+                        <li><a href="/about" className="hover:text-gold">About Us</a></li>
                         <li><a href="/academics" className="hover:text-gold">Academic Programs</a></li>
                         <li><a href="/incubator" className="hover:text-gold">Talent Incubator</a></li>
                         <li><a href="/pricing" className="hover:text-gold">Pricing & Memberships</a></li>
-                        <li><a href="/about" className="hover:text-gold">About Us</a></li>
                         <li><a href="/careers" className="hover:text-gold">Careers</a></li>
                     </ul>
                 </div>

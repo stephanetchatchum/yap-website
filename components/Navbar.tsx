@@ -21,15 +21,16 @@ export default function Navbar() {
             <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
                 
                 {/* Logo */}
-                <a href="/" className="flex items-center">
+                <a href="/" className="flex items-center gap-1">
                     <Image
-                        src="/images/logo.png"
+                        src="/images/logo-icon-white.png"
                         alt="Yigil Academy of Potentials"
-                        width={140}
-                        height={48}
-                        className="h-10 w-auto"
+                        width={40}
+                        height={30}
+                        className="h-8 w-auto"
                         priority
                     />
+                    <span className="font-heading font-bold text-2xl text-white">AP</span>
                 </a>
 
                 {/* Nav links, desktop only */}

@@ -4,6 +4,8 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import Link from 'next/link';
+import Draggable from 'react-draggable';
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -21,17 +23,26 @@ export default function Navbar() {
             <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
                 
                 {/* Logo */}
-                <a href="/" className="flex items-center gap-1">
-                    <Image
-                        src="/images/logo-icon-white.png"
-                        alt="Yigil Academy of Potentials"
-                        width={40}
-                        height={30}
-                        className="h-8 w-auto"
-                        priority
-                    />
-                    <span className="font-heading font-bold text-2xl text-white">AP</span>
-                </a>
+                <Link href="/" className="flex items-center gap-1">
+                    {/* Container for the image and the overlay text */}
+                    <div className="relative inline-block h-10 w-auto">
+                        <Image 
+                            src="/images/logo-icon-white.png" 
+                            alt="Yigil Academy of Potentials" 
+                            width={50} 
+                            height={50} 
+                            className="h-9 w-auto" 
+                            priority 
+                        />
+                        
+                        {/* Draggable "AP" text positioned on top of the image */}
+                        <Draggable bounds="parent">
+                            <div className="absolute top-2 left-6 select-none font-heading font-bold text-2xl text-white drop-shadow-md">
+                                AP
+                            </div>
+                        </Draggable>
+                    </div>
+                </Link>
 
                 {/* Nav links, desktop only */}
                 <nav className="hidden md:flex items-center gap-6 text-sm">

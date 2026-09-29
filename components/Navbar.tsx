@@ -23,15 +23,15 @@ export default function Navbar() {
             <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
                 
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-1">
+                <Link href="/" className="flex items-center gap-1.5">
                     {/* Container for the image and the overlay text */}
-                    <div className="relative inline-block h-10 w-auto">
+                    <div className="relative inline-block h-12 w-auto">
                         <Image 
                             src="/images/logo-icon-white.png" 
                             alt="Yigil Academy of Potentials" 
-                            width={50} 
-                            height={50} 
-                            className="h-9 w-auto" 
+                            width={100} 
+                            height={100} 
+                            className="h-9 w-8" 
                             priority 
                         />
                         

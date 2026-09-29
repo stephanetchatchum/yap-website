@@ -27,7 +27,7 @@ export default function Navbar() {
                     {/* Container for the image and the overlay text */}
                     <div className="relative inline-block h-12 w-auto">
                         <Image 
-                            src="/images/logo-icon-white.png" 
+                            src="/images/logo-icon-yellow.png" 
                             alt="Yigil Academy of Potentials" 
                             width={100} 
                             height={100} 

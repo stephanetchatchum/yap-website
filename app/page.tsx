@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Home() {
@@ -18,13 +17,16 @@ export default function Home() {
     <main>
       {/* Hero Section */}
       <section className="relative text-white py-32 px-4 text-center overflow-hidden md:min-h-[85vh] md:flex md:items-center">
-        <Image
-          src="/images/hero-students-2.jpg"
-          alt="Students collaborating on a tablet in the library"
-          fill
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/hero-poster.jpg"
           className="absolute inset-0 w-full h-full object-cover"
-          priority
-        />
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-navy/50"></div>
 
         <div className="relative max-w-3xl mx-auto">

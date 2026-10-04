@@ -7,11 +7,11 @@ export default function Home() {
   const { t } = useLanguage();
 
   const welcomeKit = [
-    { label: "Official Membership Card", image: "/images/kit/membership-card.jpg" },
-    { label: "Custom Yigil Polo Shirt", image: "/images/kit/polo-shirt.jpg" },
-    { label: "Branded Pen", image: "/images/kit/branded-pen.jpg" },
-    { label: "Academic Goal-Tracker Book", image: "/images/kit/goal-tracker-book.jpg" },
-    { label: "Premium Branded Water Bottle", image: "/images/kit/water-bottle.jpg" },
+    { label: "Official Membership Card", image: "/images/kit/membership-card.jpeg" },
+    { label: "Custom Yigil Polo Shirt", image: "/images/kit/polo-shirt.jpeg" },
+    { label: "Branded Pen", image: "/images/kit/branded-pen.jpeg" },
+    { label: "Academic Goal-Tracker Book", image: "/images/kit/goal-tracker-book.jpeg" },
+    { label: "Premium Branded Water Bottle", image: "/images/kit/water-bottle.jpeg" },
   ];
 
   return (

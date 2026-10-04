@@ -7,7 +7,7 @@ export default function Home() {
   const { t } = useLanguage();
 
   const welcomeKit = [
-    { label: "Official Membership Card", image: "/images/kit/membership-card.jpeg" },
+    { label: "Official Membership Card", image: "/images/kit/membership-card.jpg" },
     { label: "Custom Yigil Polo Shirt", image: "/images/kit/polo-shirt.jpeg" },
     { label: "Branded Pen", image: "/images/kit/branded-pen.jpeg" },
     { label: "Academic Goal-Tracker Book", image: "/images/kit/goal-tracker-book.jpeg" },

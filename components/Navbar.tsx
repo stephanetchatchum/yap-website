@@ -57,7 +57,7 @@ export default function Navbar() {
                 <div className="hidden md:flex items-center gap-4">
                     <button
                         onClick={toggleLanguage}
-                        className="text-sm border border-white rounded px-2 py-1"
+                        className="hidden text-sm border border-white rounded px-2 py-1"
                     >
                         {language === "en" ? "FR" : "EN"}
                     </button>
@@ -92,7 +92,7 @@ export default function Navbar() {
                     <a href="/about" className={linkClass("/about")} onClick={() => setMenuOpen(false)}>{t.nav.about}</a>
                     <button
                         onClick={toggleLanguage}
-                        className="text-sm border border-white rounded px-2 py-1 w-fit"
+                        className="hidden text-sm border border-white rounded px-2 py-1 w-fit"
                     >
                         {language === "en" ? "FR" : "EN"}
                     </button>

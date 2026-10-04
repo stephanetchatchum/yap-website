@@ -83,12 +83,24 @@ export default function About() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="bg-gray-50 py-20 px-4">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-navy mb-6">
+      <section className="relative py-24 px-4 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/vision-mission-poster.jpg"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/vision-mission.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-navy/75"></div>
+
+        <div className="relative max-w-3xl mx-auto text-white">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">
             Our Vision & Mission: Cultivating Kigali&apos;s Next Virtuosos
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
+          <p className="leading-relaxed mb-4 text-gray-100">
             Our vision is to build Kigali&apos;s premier community of excellence:{" "}
             <strong className="text-gold">
               a vibrant ecosystem where students grow together, forge
@@ -96,7 +108,7 @@ export default function About() {
               discovering what they are truly meant to do.
             </strong>
           </p>
-          <p className="text-gray-700 leading-relaxed mb-10">
+          <p className="leading-relaxed mb-10 text-gray-100">
             We believe that early exposure is the ultimate key to lifelong
             fulfillment. That is why Yigil Academy operates as a
             multidimensional launchpad, immersing children in three core
@@ -106,9 +118,9 @@ export default function About() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {domains.map((d) => (
-              <div key={d.title} className="bg-white rounded-lg shadow-sm p-6 border-t-4 border-gold">
-                <h3 className="font-heading font-bold text-navy mb-2">{d.title}</h3>
-                <p className="text-gray-600 text-sm">{d.body}</p>
+              <div key={d.title} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border-t-4 border-gold">
+                <h3 className="font-heading font-bold text-white mb-2">{d.title}</h3>
+                <p className="text-gray-200 text-sm">{d.body}</p>
               </div>
             ))}
           </div>

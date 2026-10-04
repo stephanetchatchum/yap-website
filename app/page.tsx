@@ -1,16 +1,17 @@
 "use client";
 
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Home() {
   const { t } = useLanguage();
 
   const welcomeKit = [
-    "Official Membership Card",
-    "Custom Yigil Polo Shirt",
-    "Branded Pen",
-    "Academic Goal-Tracker Book",
-    "Premium Branded Water Bottle",
+    { label: "Official Membership Card", image: "/images/kit/membership-card.jpg" },
+    { label: "Custom Yigil Polo Shirt", image: "/images/kit/polo-shirt.jpg" },
+    { label: "Branded Pen", image: "/images/kit/branded-pen.jpg" },
+    { label: "Academic Goal-Tracker Book", image: "/images/kit/goal-tracker-book.jpg" },
+    { label: "Premium Branded Water Bottle", image: "/images/kit/water-bottle.jpg" },
   ];
 
   return (
@@ -27,7 +28,7 @@ export default function Home() {
         >
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-navy/50"></div>
+        <div className="absolute inset-0 bg-navy/65"></div>
 
         <div className="relative max-w-3xl mx-auto">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
@@ -192,15 +193,18 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {welcomeKit.map((item) => (
               <div
-                key={item}
-                className="bg-white/10 rounded-lg p-5 flex flex-col items-center justify-center text-center"
+                key={item.label}
+                className="bg-white/10 rounded-lg p-4 flex flex-col items-center text-center"
               >
-                <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center mb-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5 text-gold">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375" />
-                  </svg>
+                <div className="relative w-full aspect-square rounded-md overflow-hidden mb-3 bg-white/5">
+                  <Image
+                    src={item.image}
+                    alt={item.label}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <p className="text-xs font-medium">{item}</p>
+                <p className="text-xs font-medium">{item.label}</p>
               </div>
             ))}
           </div>

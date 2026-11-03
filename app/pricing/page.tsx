@@ -1,14 +1,14 @@
 export default function Pricing() {
   const primaryTiers = [
-    { tier: "The Spark (Ad-Hoc / Exam Prep)", freq: "Per session", regular: "20,000 RWF", promo: "18,000 RWF" },
-    { tier: "The Momentum (2x / week)", freq: "Per month", regular: "150,000 RWF", promo: "135,000 RWF" },
-    { tier: "The Mastery (3x / week)", freq: "Per month", regular: "210,000 RWF", promo: "189,000 RWF" },
+    { tier: "The Spark (Ad-Hoc / Exam Prep)", freq: "Per session", regular: "20,000 RWF" },
+    { tier: "The Momentum (2x / week)", freq: "Per month", regular: "150,000 RWF" },
+    { tier: "The Mastery (3x / week)", freq: "Per month", regular: "210,000 RWF" },
   ];
 
   const secondaryTiers = [
-    { tier: "The Spark (Ad-Hoc / Exam Prep)", freq: "Per session", regular: "25,000 RWF", promo: "22,500 RWF" },
-    { tier: "The Momentum (2x / week)", freq: "Per month", regular: "180,000 RWF", promo: "162,000 RWF" },
-    { tier: "The Mastery (3x / week)", freq: "Per month", regular: "250,000 RWF", promo: "225,000 RWF" },
+    { tier: "The Spark (Ad-Hoc / Exam Prep)", freq: "Per session", regular: "25,000 RWF" },
+    { tier: "The Momentum (2x / week)", freq: "Per month", regular: "180,000 RWF" },
+    { tier: "The Mastery (3x / week)", freq: "Per month", regular: "250,000 RWF" },
   ];
 
   return (
@@ -19,9 +19,8 @@ export default function Pricing() {
             Pricing & Memberships
           </h1>
           <p className="text-gray-200">
-            Lock in a 10% discount on all tuition rates when you enroll and pay
-            or pre-pay before{" "}
-            <span className="text-gold font-bold">October 15th, 2026</span>.
+            Lock in a 10% discount on your 2nd child&apos;s tuition, 12% on
+            your 3rd, and 15% on any subsequent children.
           </p>
         </div>
       </section>
@@ -37,8 +36,7 @@ export default function Pricing() {
             <thead>
               <tr className="border-b-2 border-navy">
                 <th className="py-3 text-navy">Tier</th>
-                <th className="py-3 text-navy">Regular</th>
-                <th className="py-3 text-navy">Promo Price</th>
+                <th className="py-3 text-navy">Price</th>
               </tr>
             </thead>
             <tbody>
@@ -48,8 +46,7 @@ export default function Pricing() {
                     {row.tier}
                     <span className="block text-xs text-gray-400">{row.freq}</span>
                   </td>
-                  <td className="py-4 text-gray-400 line-through">{row.regular}</td>
-                  <td className="py-4 text-navy font-bold">{row.promo}</td>
+                  <td className="py-4 text-navy font-bold">{row.regular}</td>
                 </tr>
               ))}
             </tbody>
@@ -76,8 +73,7 @@ export default function Pricing() {
             <thead>
               <tr className="border-b-2 border-navy">
                 <th className="py-3 text-navy">Tier</th>
-                <th className="py-3 text-navy">Regular</th>
-                <th className="py-3 text-navy">Promo Price</th>
+                <th className="py-3 text-navy">Price</th>
               </tr>
             </thead>
             <tbody>
@@ -87,8 +83,7 @@ export default function Pricing() {
                     {row.tier}
                     <span className="block text-xs text-gray-400">{row.freq}</span>
                   </td>
-                  <td className="py-4 text-gray-400 line-through">{row.regular}</td>
-                  <td className="py-4 text-navy font-bold">{row.promo}</td>
+                  <td className="py-4 text-navy font-bold">{row.regular}</td>
                 </tr>
               ))}
             </tbody>
@@ -100,11 +95,17 @@ export default function Pricing() {
       <section className="bg-white py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <h3 className="font-heading text-xl font-bold text-navy mb-2">
-            Tier 3: Group Activities
+            Tier 3: Talent Incubator
           </h3>
-          <p className="text-gray-700">
+          <p className="text-gray-700 mb-6">
             Summer Camps and Seasonal Workshops.
           </p>
+          <a
+            href="/incubator"
+            className="inline-block bg-gold text-navy font-semibold rounded-lg px-5 py-2 hover:opacity-90 transition"
+          >
+            Explore Talent Incubator
+          </a>
         </div>
       </section>
 
@@ -147,7 +148,7 @@ export default function Pricing() {
 
       <section className="bg-gold py-16 px-4 text-center">
         <h2 className="font-heading text-2xl font-bold text-navy mb-4">
-          Lock in your rate before October 15th, 2026.
+          Lock in your rate NOW
         </h2>
         <a
           href="/admissions"

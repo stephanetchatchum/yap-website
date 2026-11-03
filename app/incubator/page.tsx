@@ -59,18 +59,24 @@ export default function Incubator() {
     <main>
       {/* Hero */}
       <section className="bg-navy text-white py-20 px-4 text-center">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <h1 className="font-heading text-4xl font-bold mb-4">
             Talent Incubator Programs
           </h1>
-          <p className="text-gray-200 mb-8">
+          <p className="text-gray-200">
             Because true potential is{" "}
             <strong className="text-gold">not only measured by academic grades...</strong>
           </p>
-          <h2 className="font-heading text-xl md:text-2xl font-bold mb-4">
+        </div>
+      </section>
+
+      {/* Intro */}
+      <section className="bg-white py-16 px-4 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-navy mb-4">
             Unearth Your Child&apos;s Innate Genius
           </h2>
-          <p className="text-gray-200 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed">
             Traditional education often forces children into a single lane too
             late in life, leading to academic distress or career burnout. The
             YAP Talent Incubator is a proactive solution: we immerse students

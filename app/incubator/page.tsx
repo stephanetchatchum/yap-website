@@ -60,10 +60,13 @@ export default function Incubator() {
       {/* Hero */}
       <section className="bg-navy text-white py-20 px-4 text-center">
         <div className="max-w-3xl mx-auto">
-          <h1 className="font-heading text-3xl md:text-5xl font-bold mb-8 leading-tight">
-            Because true potential is{" "}
-            <span className="text-gold">not only measured by academic grades...</span>
+          <h1 className="font-heading text-4xl font-bold mb-4">
+            Talent Incubator Programs
           </h1>
+          <p className="text-gray-200 mb-8">
+            Because true potential is{" "}
+            <strong className="text-gold">not only measured by academic grades...</strong>
+          </p>
           <h2 className="font-heading text-xl md:text-2xl font-bold mb-4">
             Unearth Your Child&apos;s Innate Genius
           </h2>

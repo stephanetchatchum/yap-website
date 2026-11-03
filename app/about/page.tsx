@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function About() {
   const domains = [
     { title: "Academics", body: "Mathematics, Sciences, Coding, advanced problem-solving, and more." },
@@ -18,13 +20,6 @@ export default function About() {
       title: "The Precision Match & Roadmap",
       body: "Once the assessment is complete, we analyze the data to build a customized, highly targeted learning roadmap. Most importantly, we use these insights to perform our Precision-Match, pairing your child with the exact Elite Academic Mentor whose personality, background, and teaching style perfectly align with your child's unique profile.",
     },
-  ];
-
-  const reasons = [
-    "Institutional Accountability: strict quality control, with seamless tutor replacement if the fit isn't right.",
-    "Ultimate Flexibility: flexible scheduling, makeup sessions, and adaptable timetables.",
-    "Vetted Experts: every tutor undergoes rigorous academic vetting and background checks.",
-    "Progress Transparency: monthly performance updates and termly academic strategy reviews.",
   ];
 
   return (
@@ -173,20 +168,28 @@ export default function About() {
 
       {/* Leadership */}
       <section className="bg-gray-50 py-20 px-4">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-navy mb-8">
-            Leadership & Our Elite Mentors
+            Leadership
           </h2>
-          <div className="bg-white rounded-lg shadow-sm p-8 flex flex-col sm:flex-row gap-6 items-start">
-            <div className="w-24 h-24 rounded-full bg-navy/10 flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-10 h-10 text-navy">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-              </svg>
+          <div className="bg-white rounded-lg shadow-sm overflow-hidden grid grid-cols-1 sm:grid-cols-3">
+            {/* Photo: stretches to the full height of the text column on larger screens */}
+            <div className="relative h-80 sm:h-auto sm:min-h-full">
+              <Image
+                src="/images/founder.jpg"
+                alt="Bryan Aurel Bakongo Bwemou, Founder & Managing Director"
+                fill
+                sizes="(min-width: 640px) 33vw, 100vw"
+                className="object-cover object-top"
+              />
             </div>
-            <div>
-              <h3 className="font-heading font-bold text-navy mb-1">
-                Bryan Aurel Bakongo Bwemou, Founder & Managing Director
+            <div className="sm:col-span-2 p-8">
+              <h3 className="font-heading text-2xl md:text-3xl font-bold text-navy">
+                Bryan Aurel Bakongo Bwemou
               </h3>
+              <p className="text-gold font-semibold uppercase tracking-wide text-sm mt-1 mb-4">
+                Founder & Managing Director
+              </p>
               <p className="text-gray-600 text-sm leading-relaxed">
                 The architecture of Yigil Academy reflects the
                 interdisciplinary background of its founder. Bridging the gap
@@ -248,23 +251,6 @@ export default function About() {
             discipline, and confidence needed to make bold, informed choices
             about their future.
           </p>
-        </div>
-      </section>
-
-      {/* Why Choose Yigil Academy */}
-      <section className="bg-gray-50 py-20 px-4">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-heading text-2xl font-bold text-navy mb-6">
-            Why Choose Yigil Academy?
-          </h2>
-          <ul className="space-y-4">
-            {reasons.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-gray-700">
-                <span className="w-2 h-2 mt-2 rounded-full bg-gold flex-shrink-0"></span>
-                {item}
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
     </main>
